@@ -1,0 +1,173 @@
+ Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: roi_value ~ roi + SEX + SEX * roi + (1 | subject_id) + (1 | session_id) + (1 | roi) 
+   Data: long_data (Number of observations: 42920) 
+  Draws: 4 chains, each with iter = 2000; warmup = 500; thin = 1;
+         total post-warmup draws = 6000
+
+Multilevel Hyperparameters:
+~roi (Number of levels: 116) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     1.51      1.37     0.06     4.91 1.57        7       27
+
+~session_id (Number of levels: 3) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     0.25      0.25     0.05     1.04 1.01      293       78
+
+~subject_id (Number of levels: 147) 
+              Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)     0.38      0.03     0.33     0.43 1.16       18       33
+
+Regression Coefficients:
+                            Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept                       0.62      2.15    -2.22     5.83 1.60        7       15
+roiAmygdala_R                  -0.91      2.71    -8.34     2.96 1.28       13       29
+roiAngular_L                   -0.86      3.13   -10.10     3.19 1.30       12       31
+roiAngular_R                   -0.52      3.01    -9.19     3.33 1.30       14       28
+roiCalcarine_L                 -1.48      2.78    -9.00     2.48 1.31       12       37
+roiCalcarine_R                 -1.66      3.06    -9.85     2.17 1.31       10       31
+roiCaudate_L                   -0.74      2.91    -8.80     2.89 1.31       11       76
+roiCaudate_R                   -0.57      2.83    -8.37     3.23 1.32       14       35
+roiCerebelum_10_L              -0.82      2.85    -8.48     3.26 1.37       13       35
+roiCerebelum_10_R              -1.13      3.27   -10.39     2.82 1.40        9       26
+roiCerebelum_3_L               -0.22      2.75    -7.65     3.96 1.26       26       41
+roiCerebelum_3_R               -0.39      2.96    -8.88     3.80 1.29       19       46
+roiCerebelum_4_5_L             -0.97      3.38   -10.99     2.91 1.33       10       31
+roiCerebelum_4_5_R             -0.52      2.33    -7.17     2.95 1.22       14       31
+roiCerebelum_6_L               -0.62      3.43   -11.98     4.08 1.24       13       25
+roiCerebelum_6_R               -0.73      3.03    -9.19     3.13 1.36        9       31
+roiCerebelum_7b_L              -0.44      2.69    -7.72     3.38 1.34       11       26
+roiCerebelum_7b_R              -0.73      2.98    -9.11     3.18 1.31       11       26
+roiCerebelum_8_L               -0.41      2.66    -7.80     3.51 1.24       19       28
+roiCerebelum_8_R               -0.67      3.11    -9.61     3.31 1.31       14       37
+roiCerebelum_9_L               -0.93      2.88    -9.09     2.85 1.33       10       32
+roiCerebelum_9_R               -1.22      3.58   -11.37     2.91 1.35       10       21
+roiCerebelum_Crus1_L           -0.34      2.86    -8.14     3.35 1.25       16       20
+roiCerebelum_Crus1_R           -0.91      3.00    -8.83     3.03 1.37        9       26
+roiCerebelum_Crus2_L           -0.66      3.17    -9.99     3.22 1.32       11       19
+roiCerebelum_Crus2_R           -0.76      3.00    -9.48     3.09 1.32       13       22
+roiCingulum_Ant_L              -0.70      3.13    -9.52     3.66 1.32       14       59
+roiCingulum_Ant_R              -0.43      2.70    -7.59     3.48 1.31       16       48
+roiCingulum_Mid_L              -0.66      2.59    -7.72     3.04 1.27       13       28
+roiCingulum_Mid_R              -0.43      2.59    -7.88     3.31 1.26       18       28
+roiCingulum_Post_L             -1.15      2.79    -8.82     2.61 1.33       10       23
+roiCingulum_Post_R             -0.99      2.93    -9.25     2.80 1.30       11       24
+roiCuneus_L                    -1.57      2.91    -9.53     2.54 1.30       18       36
+roiCuneus_R                    -1.37      2.94    -9.61     2.58 1.33       13       24
+roiFrontal_Inf_Oper_L          -0.63      3.26   -10.22     3.49 1.31       15       20
+roiFrontal_Inf_Oper_R          -0.43      2.94    -8.67     3.54 1.32       10       25
+roiFrontal_Inf_Orb_L           -0.95      3.29   -10.42     3.25 1.39       12       29
+roiFrontal_Inf_Orb_R           -0.22      2.67    -7.69     4.12 1.29       24       48
+roiFrontal_Inf_Tri_L           -0.67      3.08    -9.81     3.41 1.29       15       29
+roiFrontal_Inf_Tri_R           -0.37      2.77    -8.53     3.38 1.27       15       41
+roiFrontal_Med_Orb_L           -1.26      3.08    -9.75     2.93 1.37       10       21
+roiFrontal_Med_Orb_R           -1.06      2.97    -9.37     2.89 1.29       12       29
+roiFrontal_Mid_L               -0.78      3.11    -9.58     3.03 1.33       10       71
+roiFrontal_Mid_Orb_L           -0.63      3.03    -9.67     3.22 1.32       11       16
+roiFrontal_Mid_Orb_R           -0.48      3.18    -9.86     3.79 1.30       15       36
+roiFrontal_Mid_R               -0.62      3.32    -9.86     3.56 1.33       12       31
+roiFrontal_Sup_L               -0.85      3.05    -9.59     3.13 1.31       11       30
+roiFrontal_Sup_Medial_L        -0.73      3.27   -10.47     3.52 1.34       12       20
+roiFrontal_Sup_Medial_R        -0.83      3.21    -9.71     3.10 1.35       10       30
+roiFrontal_Sup_Orb_L           -0.54      2.68    -8.07     3.16 1.29       11       24
+roiFrontal_Sup_Orb_R           -0.80      3.09    -9.58     2.95 1.40        9       36
+roiFrontal_Sup_R               -0.37      2.65    -7.26     3.78 1.27       14       26
+roiFusiform_L                  -0.98      2.93    -9.18     2.89 1.28       14       32
+roiFusiform_R                  -0.63      2.71    -8.55     3.27 1.25       19       38
+roiHeschl_L                    -0.73      2.56    -8.08     2.99 1.28       17       37
+roiHeschl_R                    -1.38      3.08   -10.06     2.67 1.33       13       50
+roiHippocampus_L               -0.85      3.03    -9.08     3.66 1.34       13       23
+roiHippocampus_R               -1.02      3.03    -9.60     2.89 1.31       10       28
+roiInsula_L                    -0.46      3.24    -9.67     3.85 1.35       13       33
+roiInsula_R                    -0.56      3.10    -9.73     3.59 1.33       12       20
+roiLingual_L                   -1.26      2.55    -8.07     2.70 1.28       18       31
+roiLingual_R                   -1.09      2.93    -9.31     2.85 1.28       15       25
+roiOccipital_Inf_L             -0.85      2.82    -9.04     2.88 1.31       10       19
+roiOccipital_Inf_R             -0.62      2.94    -8.16     3.43 1.28       14       27
+roiOccipital_Mid_L             -0.66      2.85    -8.72     3.31 1.31       14       22
+roiOccipital_Mid_R             -0.73      2.92    -8.67     3.24 1.25       13       27
+roiOccipital_Sup_L             -1.06      3.06    -9.31     4.35 1.29       11       30
+roiOccipital_Sup_R             -0.81      3.35   -10.50     3.31 1.29       14       37
+roiOlfactory_L                 -0.85      2.83    -8.82     2.96 1.27       15       20
+roiOlfactory_R                 -0.96      2.98    -9.13     3.84 1.35       10       31
+roiPallidum_L                  -0.46      2.67    -7.87     3.18 1.27       12       33
+roiPallidum_R                  -0.56      2.91    -9.19     3.33 1.27       12       26
+roiParacentral_Lobule_L        -0.42      2.65    -7.90     3.45 1.25       20       38
+roiParacentral_Lobule_R        -0.93      3.30   -10.63     2.99 1.36       10       33
+roiParaHippocampal_L           -1.08      3.09    -9.88     3.06 1.33       11       20
+roiParaHippocampal_R           -1.02      2.82    -8.53     2.77 1.32       13       40
+roiParietal_Inf_L              -0.15      2.68    -7.20     3.61 1.29       14       24
+roiParietal_Inf_R               0.20      2.71    -7.11     3.64 1.29       11       29
+roiParietal_Sup_L              -0.73      3.49   -11.20     3.61 1.29       17       22
+roiParietal_Sup_R              -0.64      3.13   -10.03     3.21 1.31       11       23
+roiPostcentral_L               -0.67      2.65    -8.03     3.01 1.28       15       44
+roiPostcentral_R               -0.80      2.82    -8.07     3.31 1.31       15       26
+roiPrecentral_L                -0.31      2.59    -7.31     3.63 1.29       25       43
+roiPrecentral_R                -0.82      3.12   -10.04     3.17 1.31       10       21
+roiPrecuneus_L                 -1.34      3.26   -10.34     2.76 1.32       12       15
+roiPrecuneus_R                 -1.09      3.29   -11.32     3.12 1.35       12       24
+roiPutamen_L                   -0.71      2.64    -7.92     3.17 1.30       12       38
+roiPutamen_R                   -0.78      2.97    -8.90     3.78 1.41        8       18
+roiRectus_L                    -1.39      3.43   -11.02     2.74 1.42        8       29
+roiRectus_R                    -0.85      2.96    -9.01     3.39 1.34       13       37
+roiRolandic_Oper_L             -0.76      2.94    -9.20     3.21 1.30       18       27
+roiRolandic_Oper_R             -1.16      3.06    -9.97     2.81 1.32       11       31
+roiSupp_Motor_Area_L           -0.30      2.79    -8.00     3.68 1.31       13       35
+roiSupp_Motor_Area_R           -0.54      3.13    -9.26     3.50 1.37        9       28
+roiSupraMarginal_L             -0.83      2.89    -8.75     2.80 1.34       10       36
+roiSupraMarginal_R             -0.72      3.10    -9.66     3.24 1.31       11       23
+roiTemporal_Inf_L              -0.52      2.88    -8.01     3.50 1.29       24       33
+roiTemporal_Inf_R              -0.67      2.93    -8.91     3.16 1.35        9       32
+roiTemporal_Mid_L              -0.84      3.04    -9.54     3.33 1.28       20       38
+roiTemporal_Mid_R              -0.57      3.05    -9.17     3.49 1.35       11       25
+roiTemporal_Pole_Mid_L         -0.71      2.90    -8.37     3.40 1.27       19       22
+roiTemporal_Pole_Mid_R         -1.19      3.37   -10.73     3.01 1.34       13       36
+roiTemporal_Pole_Sup_L         -0.95      2.79    -8.71     2.90 1.30       11       25
+roiTemporal_Pole_Sup_R         -0.70      2.74    -8.24     3.81 1.31       25       28
+roiTemporal_Sup_L              -1.10      3.19   -10.68     2.80 1.32       10       19
+roiTemporal_Sup_R              -0.97      3.05    -9.39     2.94 1.32       12       27
+roiThalamus_L                  -0.66      2.98    -9.26     3.41 1.29       18       23
+roiThalamus_R                  -0.55      2.65    -8.25     3.12 1.26       14       26
+roiVermis_1_2                  -0.48      2.90    -8.88     3.32 1.28       12       26
+roiVermis_10                   -0.60      2.80    -8.49     3.14 1.29       12       44
+roiVermis_3                    -0.32      2.80    -7.88     4.03 1.31       19       38
+roiVermis_4_5                  -0.79      3.20   -10.23     3.02 1.32       10       40
+roiVermis_6                    -0.98      3.14   -10.35     3.07 1.32       11       22
+roiVermis_7                    -0.82      2.77    -8.88     2.98 1.28       13       34
+roiVermis_8                    -1.11      3.53   -10.75     2.95 1.52        7       19
+roiVermis_9                    -0.80      2.89    -9.02     3.02 1.30       14       40
+SEX                            -0.00      0.09    -0.16     0.17 1.13       28      152
+roiAmygdala_R:SEX               0.07      0.09    -0.11     0.26 1.05       75      215
+roiAngular_L:SEX               -0.20      0.09    -0.39    -0.02 1.06       63      232
+roiAngular_R:SEX               -0.25      0.09    -0.44    -0.07 1.07       64      125
+roiCalcarine_L:SEX             -0.00      0.09    -0.18     0.18 1.06       86      438
+roiCalcarine_R:SEX              0.01      0.09    -0.17     0.19 1.06       61      163
+roiCaudate_L:SEX               -0.07      0.10    -0.26     0.12 1.08       41       93
+roiCaudate_R:SEX               -0.09      0.09    -0.27     0.10 1.07       45      101
+roiCerebelum_10_L:SEX          -0.09      0.09    -0.28     0.09 1.04       97      425
+roiCerebelum_10_R:SEX          -0.09      0.09    -0.26     0.10 1.06       65      263
+roiCerebelum_3_L:SEX           -0.15      0.09    -0.32     0.04 1.05       76      223
+roiCerebelum_3_R:SEX           -0.07      0.10    -0.25     0.12 1.06       56       92
+roiCerebelum_4_5_L:SEX         -0.08      0.09    -0.26     0.11 1.07       52       96
+roiCerebelum_4_5_R:SEX          0.01      0.09    -0.17     0.20 1.06       68      371
+roiCerebelum_6_L:SEX           -0.07      0.09    -0.25     0.11 1.04      113      286
+roiCerebelum_6_R:SEX           -0.10      0.09    -0.27     0.09 1.06       92      278
+roiCerebelum_7b_L:SEX          -0.08      0.09    -0.25     0.10 1.06       61      208
+roiCerebelum_7b_R:SEX          -0.12      0.09    -0.30     0.07 1.05       74      167
+roiCerebelum_8_L:SEX           -0.02      0.09    -0.20     0.16 1.06       74      283
+roiCerebelum_8_R:SEX           -0.05      0.09    -0.24     0.14 1.05       73      230
+roiCerebelum_9_L:SEX           -0.09      0.09    -0.28     0.08 1.03      124      324
+roiCerebelum_9_R:SEX           -0.07      0.09    -0.27     0.11 1.05       73      414
+roiCerebelum_Crus1_L:SEX       -0.19      0.10    -0.38     0.00 1.06       55      181
+roiCerebelum_Crus1_R:SEX       -0.14      0.09    -0.32     0.05 1.07       50      111
+roiCerebelum_Crus2_L:SEX       -0.21      0.09    -0.39    -0.02 1.06       56      162
+roiCerebelum_Crus2_R:SEX       -0.14      0.09    -0.32     0.05 1.07       55      125
+ [ reached getOption("max.print") -- omitted 90 rows ]
+
+Further Distributional Parameters:
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.63      0.00     0.62     0.63 1.00     3195     2787
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
